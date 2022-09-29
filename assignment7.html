@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container mt-3 border border-2 bg-warning border-danger">
+        <h1 id="toasth1">PmKisan</h1>
+        
+        <div class="toast bg-info">
+            <div class="toast-header bg-info text-success">
+                <strong class="mx-auto">Pm Kisan</strong>
+                <button class="btn-close" type="button" data-bs-dismiss="toast"></button>
+            </div>
+            <div class="toast-body">
+                <p class="text-info bg-success">The Pradhan Mantri Kisan Samman Nidhi Yojana (PM-Kisan Yojana) is a government scheme through which, all small and marginal farmers will get up to Rs 6,000 per year as minimum income support. This 75,000-crore scheme aims to cover 125 million farmers, irrespective of the size of their landholding in India.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("toasth1").onclick = function() {
+            var toastTriggerList = [].slice.call(document.querySelectorAll('.toast'));
+            var toastList = toastTriggerList.map(function(toast){
+                return new bootstrap.Toast(toast);
+            });
+            toastList.forEach(toast => toast.show());
+        }
+    </script>
+</body>
+</html>
